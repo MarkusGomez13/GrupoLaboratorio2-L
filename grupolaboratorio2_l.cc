@@ -14,11 +14,28 @@ Libro milibro;
 struct Nodo *siguiente;
 struct Nodo *anterior;
 };
+Nodo * inicio = nullptr;
 //Declaracion de funciones 
 void InsertarInicio ();
 void BorrarInicio ();
 void ImprimirDatos ();
 int main ()
 {
+struct Nodo *milibro;
 
+}
+void BorrarInicio ()
+{
+if (inicio == nullptr)
+{
+std::cout<<"La lista esta vacia\nNop hay libros para eliminar";
+}  
+Nodo* temporal = inicio;
+inicio = inicio->siguiente;
+if (inicio != nullptr)
+{
+inicio->anterior = nullptr;
+}
+std::cout<<"Libro eliminado: " << temporal->milibro.titulo_del_libro;
+delete temporal;
 }
